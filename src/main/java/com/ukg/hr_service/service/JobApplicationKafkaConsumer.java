@@ -17,7 +17,7 @@ public class JobApplicationKafkaConsumer {
         this.notificationRepository = notificationRepository;
     }
 
-    @KafkaListener(topics = "job-applications", groupId = "hr-service")
+    @KafkaListener(topics = "job-applications")
     public void consume(String message) {
         Notification notification = new Notification();
         notification.setMessage(message);
